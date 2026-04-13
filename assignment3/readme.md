@@ -39,11 +39,11 @@ To run actual classification with the desired arguments, if any. This takes a wh
 ## Outputs
 The script saves to the out folder.
 
-The classification reports indicate that using the pretraing VGG16 network within a transfer learning paradigm raises classification accuracy on base images significantly, from an f1 accuracy of 0.53 in the LeNet implementation to 0.88 in the VGG implementation.
+The classification reports indicate that using the pretrained VGG16 network within a transfer learning paradigm raises classification accuracy on base images significantly, from an f1 accuracy of 0.53 in the LeNet implementation to 0.88 in the VGG implementation.
 
-Looking at the training plots for base images, we see that the VGG model hits close to maximum accuracy after three epochs, which is also where training and validation loss begins to converge - indicating overfitting in the later epochs. If sticking to a strict early stopping regime, it could be argued that the model should stop training at this point, with a validation accuracy at ~0.85.
+Looking at the training plots for base images, we see that the VGG model hits close to maximum accuracy after three epochs, which is also where training and validation loss begin to diverge - indicating overfitting in the later epochs. If sticking to a strict early stopping regime, it could be argued that the model should stop training at this point, with an in-sample validation accuracy at ~0.85.
 
-The LeNet model also shows signs of overfitting at the third epoch, but at a validation accuracy of only ~0.24. This tells us that implementing the pretrained VGG16 network has a very large impact on the accuracy of classification.
+The LeNet model also shows signs of overfitting at the third epoch, but at an in-sample validation accuracy of only ~0.24. This tells us that implementing the pretrained VGG16 network has a large impact on the accuracy of classification.
 
 While the change in f1 accuracy in itself tells us that it is worth using a pretrained network in the architecture, this also becomes even clearer when looking at the details in the classification reports. The LeNet model struggles a lot in certain categories, with the lowest f1 accuracy at only 0.13, compared to the VGG lowest category being 0.71. This shows that not only does VGG increase accuracy on certain "easier" categories, it also raises the lowest bar significantly, flattening classification accuracy across the (lego)board.
 
