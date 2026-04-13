@@ -11,7 +11,7 @@ The data contains both "base", with the LEGO brick only taking up a small portio
 
 ## Running
 ### 1. 
-Download the data from Kaggle here: https://www.kaggle.com/datasets/pacogarciam3/lego-brick-sorting-image-recognition and unzip this into the data folder in this repo.
+Download the data from Kaggle here: https://www.kaggle.com/datasets/pacogarciam3/lego-brick-sorting-image-recognition and unzip this into the data folder in this repo. The data should be structured with a "base" folder and a "cropped" folder.
 
 ### 2.
 Run setup script below in the terminal. This sets up a virtual environment and downloads the required packages.
@@ -34,14 +34,18 @@ Finally do
 ```
 python src/main.py
 ```
-To run actual classification with the desired arguments. This takes a while.
+To run actual classification with the desired arguments, if any. This takes a while.
 
 ## Outputs
 The script saves to the out folder.
 
-The classification reports indicate that using the pretraing VGG16 networks for a form of transfer learning raises classification accuracy a non-neglible amount from PLACEHOLDER to PLACEHOLDER.
+The classification reports indicate that using the pretraing VGG16 network within a transfer learning paradigm raises classification accuracy on base images significantly, from an f1 accuracy of 0.53 in the LeNet implementation to 0.88 in the VGG implementation.
 
-Looking at the training plots, we also see that the PLACEHOLDER model seems to train more robustly, and for longer before plateauing and overfitting to the data. Both have in common that certain categories are harder to classify than others, seen by lower f1 scores for these categories.
+Looking at the training plots for base images, we see that the VGG model hits close to maximum accuracy after three epochs, which is also where training and validation loss begins to converge - indicating overfitting in the later epochs. If sticking to a strict early stopping regime, it could be argued that the model should stop training at this point, with a validation accuracy at ~0.85.
+
+The LeNet model also shows signs of overfitting at the third epoch, but at a validation accuracy of only ~0.24. This tells us that implementing the pretrained VGG16 network has a very large impact on the accuracy of classification.
+
+While the change in f1 accuracy in itself tells us that it is worth using a pretrained network in the architecture, this also becomes even clearer when looking at the details in the classification reports. The LeNet model struggles a lot in certain categories, with the lowest f1 accuracy at only 0.13, compared to the VGG lowest category being 0.71. This shows that not only does VGG increase accuracy on certain "easier" categories, it also raises the lowest bar significantly, flattening classification accuracy across the (lego)board.
 
 ## Future Improvements
 The approach in this repo is far from perfect, even if it does constitute a viable approach to classifying the given images. 
