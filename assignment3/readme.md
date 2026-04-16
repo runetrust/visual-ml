@@ -25,7 +25,7 @@ Run the command below in the terminal to activate environment.
 source env/bin/activate
 ```
 
-The main.py script defaults to running both classifiers on both data types for 10 epochs. Run the chunk below to check argparse arguments for changing this behavior.
+The main.py script defaults to running both classifiers on both data types for 10 epochs. Run the code in the chunk below to check argparse arguments for changing this behavior.
 ```
 python src/main.py -h
 ```
@@ -54,4 +54,4 @@ Firstly, the base LeNet CNN has been created with "default" layers and is not as
 
 Secondly, no hyperparameter tuning was done. This means that the default values have not been selected from a place of maximizing accuracy to the task - this could potentially garner significant improvements to the classifiers. 
 
-Thirdly, the data is split into train / val / test segments with a fixed seed. This seed does not return perfectly balanced datasets (seen from support in classification report) so a different seed could potentially return more balanced datasets which should theoretically improve model accuracy.
+Thirdly, the data is split into train / val / test segments with a fixed seed. This seed does not return perfectly balanced datasets (seen from support in classification report) so a different seed could potentially return more balanced datasets which should theoretically improve model accuracy. Another option is doing a stratified split, but this is not natively supported in the Tensorflow dataset. 
