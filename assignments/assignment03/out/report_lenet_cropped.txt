@@ -1,0 +1,28 @@
+#### Classification report – lenet_cropped ####
+
+                 precision    recall  f1-score   support
+
+      Brick_1x1       0.31      0.17      0.22        24
+      Brick_1x2       0.25      0.30      0.27        20
+      Brick_1x3       0.28      0.26      0.27        19
+      Brick_1x4       0.71      0.52      0.60        29
+      Brick_2x2       0.55      0.60      0.57        20
+    Brick_2x2_L       0.41      0.38      0.39        34
+Brick_2x2_Slope       0.50      0.21      0.30        14
+      Brick_2x3       0.38      0.35      0.36        17
+      Brick_2x4       0.37      0.53      0.44        32
+      Plate_1x1       0.56      0.24      0.33        21
+Plate_1x1_Round       0.83      0.29      0.43        17
+Plate_1x1_Slope       0.75      0.24      0.36        38
+      Plate_1x2       0.57      0.13      0.22        30
+Plate_1x2_Grill       0.80      0.74      0.77        27
+      Plate_1x3       0.72      0.54      0.62        24
+      Plate_1x4       0.55      0.89      0.68        19
+      Plate_2x2       0.28      0.95      0.43        20
+    Plate_2x2_L       0.59      0.34      0.43        29
+      Plate_2x3       0.24      0.73      0.36        11
+      Plate_2x4       0.45      0.83      0.58        23
+
+       accuracy                           0.45       468
+      macro avg       0.50      0.46      0.43       468
+   weighted avg       0.52      0.45      0.44       468

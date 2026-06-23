@@ -1,0 +1,28 @@
+#### Classification report – vgg_base ####
+
+                 precision    recall  f1-score   support
+
+      Brick_1x1       0.84      0.70      0.76        23
+      Brick_1x2       0.65      1.00      0.79        17
+      Brick_1x3       0.92      0.86      0.89        28
+      Brick_1x4       0.83      0.97      0.90        31
+      Brick_2x2       0.77      1.00      0.87        23
+    Brick_2x2_L       0.93      0.89      0.91        28
+Brick_2x2_Slope       1.00      0.71      0.83        17
+      Brick_2x3       0.95      0.88      0.91        24
+      Brick_2x4       0.84      0.91      0.88        23
+      Plate_1x1       0.73      0.95      0.83        20
+Plate_1x1_Round       1.00      1.00      1.00        15
+Plate_1x1_Slope       1.00      0.78      0.88        45
+      Plate_1x2       0.95      0.88      0.91        24
+Plate_1x2_Grill       1.00      1.00      1.00        26
+      Plate_1x3       1.00      0.83      0.91        29
+      Plate_1x4       0.90      1.00      0.95        18
+      Plate_2x2       0.96      1.00      0.98        22
+    Plate_2x2_L       0.96      1.00      0.98        22
+      Plate_2x3       1.00      0.88      0.93        16
+      Plate_2x4       1.00      1.00      1.00        17
+
+       accuracy                           0.90       468
+      macro avg       0.91      0.91      0.90       468
+   weighted avg       0.92      0.90      0.90       468
